@@ -1,9 +1,6 @@
 "use client";
 import { motion } from "framer-motion";
 import Footer from "@/components/global/footer";
-import portable from "@/public/assets/global/chess/portable.png";
-import classic from "@/public/assets/global/chess/classic.png";
-import marble from "@/public/assets/global/chess/marble.png";
 import { NavBar } from "@/components/global/NavBar";
 import Image from "next/image";
 const boards = [
@@ -12,7 +9,7 @@ const boards = [
     name: "Classic Walnut",
     subtitle: "Hand‑crafted walnut & maple",
     price: "$129",
-    img: classic,
+    img: "/assets/global/chess/classic.png",
     accent: "#E6E1DC",
   },
   {
@@ -20,7 +17,7 @@ const boards = [
     name: "Marble Deluxe",
     subtitle: "Solid marble for collectors",
     price: "$249",
-    img: marble,
+    img: "/assets/global/chess/marble.png",
     accent: "#F3F7F9",
   },
   {
@@ -28,7 +25,7 @@ const boards = [
     name: "Portable Folding",
     subtitle: "Compact & elegant — take it anywhere",
     price: "$89",
-    img: portable,
+    img: "/assets/global/chess/portable.png",
     accent: "#FBF7F2",
   },
 ];
@@ -151,6 +148,8 @@ export default function Shop() {
                       <Image
                         src={b.img}
                         alt={b.name}
+                        width={600}
+                        height={600}
                         className="w-full h-full object-cover object-center"
                       />
                     </div>
