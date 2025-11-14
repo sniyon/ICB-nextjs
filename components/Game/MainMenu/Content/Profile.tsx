@@ -1,6 +1,6 @@
 import { EditFilled } from "@ant-design/icons";
 import { CheckSquareFilled, CloseSquareFilled } from "@ant-design/icons";
-import ProfileBackgroundImage from "../../../../assets/MainMenu/Profile/Profile_Page_bg.png";
+import ProfileBackgroundImage from "@/public/assets/MainMenu/Profile/Profile_Page_bg.png";
 import { motion } from "framer-motion";
 import {
   act,
