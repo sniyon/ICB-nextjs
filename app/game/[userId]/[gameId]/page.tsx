@@ -1,11 +1,11 @@
 "use client";
 import { useParams } from "next/navigation";
-import Board from "../../../../components/Game/Board/Board";
+import Board from "@/components/Game/Board/Board";
 import { useEffect, useRef, useState, type RefObject } from "react";
 import { FlagFilled, LoadingOutlined } from "@ant-design/icons";
 import ChessGameController, {
   type GameMode,
-} from "../../../../components/Game/Board/ChessGameController";
+} from "@/components/Game/Board/ChessGameController";
 import { Spin } from "antd";
 
 export default function Game() {
@@ -15,14 +15,22 @@ export default function Game() {
   const [isWhiteTurn, setIsWhiteTurn] = useState<boolean>(true);
   const [moveHistory, setMoveHistory] = useState<[string, string][]>([]);
 
-  //getting params from url
-  const { gameId, userId } = useParams();
+  // Get params
+  const params = useParams();
+
+  // Normalize them: ensure they are strings (not string[])
+  const userId = Array.isArray(params.userId)
+    ? params.userId[0]
+    : params.userId;
+  const gameId = Array.isArray(params.gameId)
+    ? params.gameId[0]
+    : params.gameId;
+
   if (!userId || !gameId) {
     return <div>Loading game...</div>;
   }
 
   useEffect(() => {
-    //Pre-configuration
     (async () => {
       if (!isLoaded) {
         const gameMode: GameMode = "singlePlayer";
@@ -43,7 +51,7 @@ export default function Game() {
     const handleTurnChange = (turn: string) => {
       console.log("Turn changed to:", turn);
       setMoveHistory(controller.moveHistory);
-      setIsWhiteTurn(turn === "white" ? true : false);
+      setIsWhiteTurn(turn === "white");
     };
     const handleStatusChange = (status: string) => {
       console.log("Game status changed:", status);
@@ -75,14 +83,11 @@ export default function Game() {
   }
 
   return (
-    // make the parent relative so the absolute child is positioned against it
     <div className="">
-      {/* Board */}
       <div className="relative bg-[#f5f5f5]">
         <Board chessGameControllerRef={chessGameControllerRef} />
         <MovesLogger moves={moveHistory} />
 
-        {/* Top profile card */}
         <GameProfileCard
           isPlayerCard={false}
           imgSrc="https://yoolk.ninja/wp-content/uploads/2017/03/Apps-Stockfish.png"
@@ -92,7 +97,6 @@ export default function Game() {
           }
         />
 
-        {/* Bottom profile card */}
         <GameProfileCard
           isPlayerCard={true}
           imgSrc="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/Lichess_Logo_2019.svg/240px-Lichess_Logo_2019.svg.png"
