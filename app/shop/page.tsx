@@ -109,7 +109,7 @@ export default function Shop() {
                 {/* Soft arch / background accent */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                   <div
-                    className="w-2/3 md:w-3/5 h-4/5 rounded-tl-[40%] rounded-tr-[40%] bg-gradient-to-b"
+                    className="w-2/3 md:w-3/5 h-4/5 rounded-tl-[40%] rounded-tr-[40%] bg-linear-to-b"
                     style={{
                       background: `linear-gradient(180deg, ${b.accent}, rgba(255,255,255,0))`,
                       filter: "blur(0px)",
