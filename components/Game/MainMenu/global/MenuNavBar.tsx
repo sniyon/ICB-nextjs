@@ -28,11 +28,7 @@ export default function MenuNavBar({
     <div className="h-screen w-[100%] shadow-md">
       {/* top */}
       <div className=" relative flex items-center justify-center w-full h-[10%]">
-        <img
-          src={MainLogoDark}
-          alt="Main Logo"
-          className="w-[50%] max-w-[300px] h-fit"
-        />
+        <img src={MainLogoDark} alt="Main Logo" className="h-8  w-auto " />
       </div>
 
       {/* middle */}
