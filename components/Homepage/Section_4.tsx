@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import "../../styles/Pages/Homepage/Section_4.css";
-import black_white_board from "../../assets/HomePage/black_white_board.jpg";
+import black_white_board from "@/public/assets/HomePage/black_white_board.jpg";
 import Image from "next/image";
 
 export default function Section_4() {

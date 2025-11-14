@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import "../../styles/Pages/Homepage/Section_3.css";
-import adaptable_training from "../../assets/HomePage/adaptable_training.jpg";
-import online_matchmaking from "../../assets/HomePage/online_matchmaking.jpg";
-import physical_touch from "../../assets/HomePage/physical_touch.jpg";
+import adaptable_training from "@/public/assets/HomePage/adaptable_training.jpg";
+import online_matchmaking from "@/public/assets/HomePage/online_matchmaking.jpg";
+import physical_touch from "@/public/assets/HomePage/physical_touch.jpg";
 import Image from "next/image";
 
 export default function Section_3() {

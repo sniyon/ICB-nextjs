@@ -1,6 +1,6 @@
 import "../../styles/Pages/Homepage/Section_1.css";
-import pointsBG from "../../assets/HomePage/pointsBG.png";
-import chess_piece from "../../assets/HomePage/chess_piece.png";
+import pointsBG from "@/public/assets/HomePage/pointsBG.png";
+import chess_piece from "@/public/assets/HomePage/chess_piece.png";
 import Image from "next/image";
 
 export default function Section_1() {

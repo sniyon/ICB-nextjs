@@ -2,7 +2,7 @@
 import { useEffect, useRef, useState } from "react";
 import "../../styles/Pages/Homepage/Section_5.css";
 import Card from "./Card";
-import card_image_placeholder from "../../assets/HomePage/card_image_placeholder.png";
+import card_image_placeholder from "@/assets/HomePage/card_image_placeholder.png";
 
 export default function Section_5() {
   const sectionRef = useRef(null);
@@ -36,7 +36,7 @@ export default function Section_5() {
         title="New Website"
         date="15 Jan"
         description="We're announcing that we just released our new website with more to come"
-        image={card_image_placeholder}
+        image="/assets/HomePage/card_image_placeholder.png"
       />
     </div>
   );

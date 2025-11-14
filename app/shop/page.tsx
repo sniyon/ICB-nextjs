@@ -1,9 +1,9 @@
 "use client";
 import { motion } from "framer-motion";
 import Footer from "@/components/global/footer";
-import portable from "@/assets/global/chess/portable.png";
-import classic from "@/assets/global/chess/classic.png";
-import marble from "@/assets/global/chess/marble.png";
+import portable from "@/public/assets/global/chess/portable.png";
+import classic from "@/public/assets/global/chess/classic.png";
+import marble from "@/public/assets/global/chess/marble.png";
 import { NavBar } from "@/components/global/NavBar";
 import Image from "next/image";
 const boards = [

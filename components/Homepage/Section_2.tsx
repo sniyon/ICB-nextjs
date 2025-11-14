@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import "../../styles/Pages/Homepage/Section_2.css";
 import { ChevronDown } from "lucide-react";
-import section2image from "../../assets/HomePage/section2_image.jpg";
+import section2image from "@/public/assets/HomePage/section2_image.jpg";
 
 export default function Section_2() {
   const sectionRef = useRef(null);

@@ -1,7 +1,6 @@
 "use client";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import iconDark from "../../assets/global/icon_dark.svg";
 
 export function NavBar() {
   return (
@@ -47,7 +46,12 @@ export function NavBar() {
             </ul>
           </div>
           <a href="/">
-            <Image src={iconDark} alt="Logo" className="h-10 w-auto" />
+            <Image
+              src="/assets/global/icon_dark.svg"
+              alt="Logo"
+              width={10}
+              height={10}
+            />
           </a>
         </div>
 
